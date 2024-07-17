@@ -90,5 +90,5 @@ dist-ssr
 *.sln
 *.sw?
 
-.yarn
-.bundle
+.yarn/
+.bundle/
