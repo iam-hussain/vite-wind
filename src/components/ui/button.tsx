@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { styled } from "nativewind";
+import { styled, StyledProps } from "nativewind";
 import * as React from "react";
 import { Pressable, PressableProps, Text, View } from "react-native";
 
@@ -89,11 +89,9 @@ interface IconRefProps {
 }
 
 export interface ButtonProps
-  extends Omit<PressableProps, "children">,
-    VariantProps<typeof buttonVariants>,
-    IconProps {
-  asChild?: boolean;
-  className?: string;
+  extends StyledProps<PressableProps & React.RefAttributes<View>>,
+  VariantProps<typeof buttonVariants>,
+  IconProps {
   children?: React.ReactNode;
   label?: string;
 }

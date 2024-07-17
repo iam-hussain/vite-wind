@@ -1,10 +1,13 @@
-import { styled } from "nativewind";
+import { styled, StyledProps } from "nativewind";
 import * as React from "react";
 import { TextInput, TextInputProps } from "react-native";
 
 import { classMerge } from "@/utils";
 
-export interface InputProps extends TextInputProps {}
+export interface InputProps extends TextInput {
+  placeholder?: string;
+  className?: string;
+}
 
 const StyledTextInput = styled(TextInput);
 
